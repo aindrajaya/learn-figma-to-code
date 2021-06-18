@@ -1,0 +1,26 @@
+SCRIMBA - FROM FIGMA TO CODE
+-----------------------------------------
+#WHAT YOU WILL LEARN
+1. Structuring HTML Markpu for Layouts
+2. The CSS Grid
+3. Flexbox
+4. Responsive, mobile-first Development
+5. Using Figma to create near-pixel perfect code
+6. How to use CSS units like Ems and Rems
+7. Creating responsive, animated navigations
+8.
+
+#USING FIGMA
+-figma has it own css property for each design
+-the units property on figma is using px/pixel
+-you don't need to follow the units based on figma
+-you should convert the units to rem or em/ any relative length unit in css (%, vh, vw or any) rather than absolute length (px pt mm, or etc)
+
+#UNITS EMs REMs
+-em = Relative to the font-size of the element (2em means 2 times the size of the current font). These units grows based on the font-size grows on the selector itself, selector priority first rather than root.
+-rem = Relative fo font-size of the root element. It will ignore the units from selector and will use the root or html.
+-16px is the default font-size of the root element in the browser.
+-So the main thing that we learn is about to convert margin padding unit by using the font-size units, so if in the figma the margin declared 32px and you should see the font-size first, and the you can decide to divide the margin with the font-size units (32 / 16(default font-size) = 2em). So the units that we should declare on the margin is 2em. [margin: 2em]
+
+#Simple Card
+first of all you need to build the markup div container, if you want to make your card clickable/create some events you can add the a/anchor tag inside the div container to wrap the image, title, description and the button link element.
