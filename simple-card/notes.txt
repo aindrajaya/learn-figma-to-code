@@ -1,0 +1,42 @@
+SIMPLE CARD
+(https://scrimba.com/learn/figmatocode/simple-card-finishing-up-co6544b7db3c44f63cdfe785f)
+------------------
+#Step To Complete
+1. You should following this Figma File https://www.figma.com/file/wzAjc1CgGZ0o2S3X9xRaBP/A-Simple-Card?node-id=0%3A1
+
+2. Divide the Markup Structure (HTML) by each section:
+*Head (contain the stylesheet)
+-->Link Stylesheet and 
+-->Link Font-familiy (for this case we call the Poppins font-family from google fonts))
+*Body -> Card Component
+--> Wrapping by div container class - it will be our card container
+----> Wrapping to a tag/element - so it can become clickable card
+------> img photo class - this section contain image mountains, will be our main image on the card component
+------> div content class (divide 3 content, title, desc, and link button with image)
+--------> p title class
+--------> p description class
+--------> img link class with icon image -> link.svg
+
+3. So we will focus on the style section
+Open the index.css
+Step 1: declare the common body css property (margin, padding, height, background, font-family) and the specific one (place-items: center and then display: grid).
+Notes:
+--> height: 100vh => 100% of the viewport height. This is the "viewport height" unit. 1vh is equal to 1% of the height of the viewport. It is similar to percentage, except that the value remaons consisten for all elements regardless of their parent elements or parent elements height. A bit like how rem units are always relative to the root. 
+--> display: grid => it will declare that the component display will be using grid based user interfaces. 
+--> place-items: center => the place-items property in CSS is shorthand for the align-items and justify-items properties, combining them into a single declaration. A common usage is doing horizontal and vertical centering with Grid.
+Step 2: declare the img and a css properties (img{width: 100%; border-radius: 0.2rem;} and a{text-decoration: none})
+Notes:
+--> border-radius: 0.2rem => so the border-radius size will be 0.2 * 16px = 3.2px. The rem will following the root element value of font-size (Root EM) that has default value 16px when the width is under 270px.
+--> text-decoration: none => this one is to remove the underline a tag, because a tag has the default format using underline
+Step 3: After we declare the body, img and a elements. The next, we should implement the mobile-first approacs design. It means that we should follow the styling approacsh that styles are applied first to mobile devies. Advanced styles and other overrides for larger screens are then added into the stylesheet via media queries.
+Step 4: Set the container div element (background, margin, padding, border-radius and max-widht)
+Notes:
+--> margin and padding : 1rem => same as the declaration of rem unit before. In this case the margin and padding has 16p value because 1rem = 1 * 16px = 16px. 
+--> border-radius : .4rem => and this one is the same as the border-radius declaration before that the border-radius value has .4rem = 0.4 * 16px = 6.4px real value.
+--> max-width : 270px => this one is the one important, because when we declare to using mobile first approach, we must set the max-widh property value that will be use on our declared value before (margin, border-radius and etc).  It means that if we're reach the width more than 270px, the property will not scale up/ or stop to scale. because we decide that our width is 270px. So that's why it's called mobile-first design. We focus on the mobile design first.
+Step 5: Declare title{font-size: 1.2rem; line-height: 119.7%}, description{ font-size: .8rem} p tags, and .link class(width: .8rem)
+Notes:
+--> font-size: 1.2rem => the font-size on this specific title is declare 1.2rem, which mean it has 1.2 * 16px = 19.2px.
+--> line-height: 119.7% => it describes that the space between font/line is more than height properties value
+--> link - width: .8rem => Basically the link is contain an image svg file that has their own width size. So the size is decided to .8rem that has real px value is about 0.8 * 16px = 12.8px.
+Step 6: Set the media screen with min-width:500px. .container{max-width: 31.25rem; background:red}
