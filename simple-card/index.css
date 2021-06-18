@@ -1,0 +1,85 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #2D2E36;
+  font-family: 'Poppins';
+}
+
+img{
+  width: 100%;
+
+  /*16px x 0.2 = 3.2px(real value) */
+  border-radius: .2em;  
+}
+
+a{
+  /* to remove the underline */
+  text-decoration: none;
+}
+
+.container{
+  background: #383a45;
+  margin: 1em; /* 16px (real value)*/
+  padding: 1em; /* 16px (real value)*/
+  border-radius: .4em; /* 6.4px (real value)*/
+
+  /* mobile-first 
+    - the container div will be stop scalling up when the browser width reach 270px
+    - but if the browser width below 270px, the container will follow the browser width
+    - so it called mobile first design approach
+  */
+  max-width: 270px; 
+}
+
+p.title{
+  color: white;
+  font-size: 1.2em;
+  line-height: 119.7%;
+}
+
+p.description{
+  color: #8D91A6;
+  font-size: .8em;
+}
+
+.link{
+  width: .8em;
+}
+
+@media only screen and (min-width: 550px){
+  .container{
+    /* This will make you easier to convert to any screen size */
+    max-width: 31.25em;
+    background: red;
+  }
+
+  .photo{
+    width: 9em;
+    margin-right: 1em;
+  }
+
+  a{
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 750px){
+  body{
+    font-size: 18px;
+  }
+  .container{
+    background: yellow;
+  }
+}
+
+@media only screen and (min-width: 1150px){
+  body{
+    font-size: 25px;
+  }
+  .container{
+    background: blue;
+  }
+}
